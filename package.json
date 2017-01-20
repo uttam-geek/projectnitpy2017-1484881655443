@@ -23,5 +23,10 @@
   "homepage": "https://github.com/uttam-geek/projectnitpy2017-1484881655443#readme",
   "dependencies": {
     "watson-developer-cloud": "^2.15.2"
-  }
+  },
+  "engines": {
+  "node": "6.9.4",
+  "npm": "3.10.10"
+}
+
 }
