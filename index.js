@@ -1,1 +1,2 @@
-console.log('Hello World');
+var watson = require('watson-developer-cloud');
+console.log(watson);
