@@ -1,0 +1,7 @@
+cf api https://api.ng.bluemix.net
+cf login
+
+kprabu04@gmail.com
+Kprabu-1
+
+cf push projectnitpy2017

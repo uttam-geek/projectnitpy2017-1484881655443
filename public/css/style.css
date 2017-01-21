@@ -1,0 +1,49 @@
+body {
+  margin: 0px;
+  padding: 30px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#header{
+  position: relative;
+}
+#logo{
+  position: relative;
+  min-width: 100px;
+  overflow: hidden;
+  float: left;
+}
+#title{
+  position: relative;
+  overflow: hidden;
+  float: left;
+  font-family: "Dejavu Sans";
+}
+#footer{
+border-top: 2px solid #2b87ab;
+padding-top: 10px;
+}
+#clearfix{
+  clear: both;
+}
+#host-comp img{
+padding-left:5px;
+padding-right:5px;
+}
+#container{
+  min-height: 450px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+#watson{
+  position: relative;
+  width:30%;
+  float: left;
+}
+#data{
+  position: relative;
+  width: 68%;
+  float: right;
+}

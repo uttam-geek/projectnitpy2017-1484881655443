@@ -4,11 +4,56 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel='stylesheet' href='/css/app.css' />
   </head>
   <body>
-  <img src="/images/watson.gif"  height="80px" alt="Watson Search" title="Watson Search">
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div id="header">
+      <div id="logo"><img src="/images/watson.gif"  height="80px" alt="Watson Search" title="Watson Search"></div>
+      <div id="title">  <h1><%= title %></h1> </div>
+    </div>
+    <div id="clearfix"></div>
+
+    <div id="container">
+      <div id="view-change-button" class="button" onclick="PayloadPanel.togglePanel(event, this)">
+        <img class="option full" src="../img/Chat Button.png">
+        <img class="option not-full" src="../img/Code Button.png">
+      </div>
+      <div id="contentParent" class="responsive-columns-wrapper">
+        <div id="chat-column-holder" class="responsive-column content-column">
+          <div class="chat-column">
+            <div id="scrollingChat"></div>
+            <label for="textInput" class="inputOutline">
+              <input id="textInput" class="input responsive-column"
+                placeholder="Type something" type="text"
+                onkeydown="ConversationPanel.inputKeyDown(event, this)">
+            </label>
+          </div>
+        </div>
+        <div id="payload-column" class="fixed-column content-column">
+          <div id="payload-initial-message">
+            Type something to see the output
+          </div>
+          <div id="payload-request" class="payload"></div>
+          <div id="payload-response" class="payload"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="clearfix"></div>
+    <div id="footer">
+      <div id="host-comp">
+        <img src="/images/bluemix-logo.svg"height="15px" alt="Watson Search" title="Watson Search">IBM Bluemix
+        <img src="/images/Watson.png"height="15px" alt="Watson Search" title="Watson Search">Powered by Watson
+      </div>
+    </div>
+
+<script src="js/common.js"></script>
+<script src="js/api.js"></script>
+<script src="js/conversation.js"></script>
+<script src="js/payload.js"></script>
+<script src="js/global.js"></script>
   </body>
 </html>
